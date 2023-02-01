@@ -14,5 +14,9 @@
     "husky"
   ],
   "author": "Fabrice Feugang Kemegni",
-  "license": "ISC"
+  "license": "ISC",
+  "bin": {
+    "create": "./create.sh",
+    "delete": "./delete.sh"
+  }
 }
