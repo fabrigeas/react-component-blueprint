@@ -43,3 +43,7 @@ The tool will automatically camelerize the component's name
       - Other.css
       - Other.test.tsx
 ```
+
+## Resources 
+
+[https://blog.developer.atlassian.com/scripting-with-node/](https://blog.developer.atlassian.com/scripting-with-node/9

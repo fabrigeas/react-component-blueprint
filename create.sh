@@ -27,7 +27,7 @@ function verify_destination_folder() {
 function delete_duplicate_component() {
     componentPath=$1
 
-    if [ - $componentPath ] ; then
+    if [ -d $componentPath ] ; then
         echo "Component '$componentPath' already exists!"
         # rm  -rf $componentPath
     fi
