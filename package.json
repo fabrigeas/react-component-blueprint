@@ -1,0 +1,18 @@
+{
+  "name": "react-component-blueprint",
+  "version": "1.0.0",
+  "description": "a command line tool to create typed react components and other helpers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "shel",
+    "npm",
+    "react",
+    "typescript",
+    "husky"
+  ],
+  "author": "Fabrice Feugang Kemegni",
+  "license": "ISC"
+}
