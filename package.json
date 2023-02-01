@@ -4,7 +4,8 @@
   "description": "a command line tool to create typed react components and other helpers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
   "keywords": [
     "shel",
@@ -16,7 +17,15 @@
   "author": "Fabrice Feugang Kemegni",
   "license": "ISC",
   "bin": {
-    "create": "./create.sh",
-    "delete": "./delete.sh"
-  }
+    "create": "create.sh",
+    "delete": "delete.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabrigeas/react-component-blueprint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fabrigeas/react-component-blueprint/issues"
+  },
+  "homepage": "https://github.com/fabrigeas/react-component-blueprint#readme"
 }
