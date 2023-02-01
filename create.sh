@@ -27,9 +27,8 @@ function verify_destination_folder() {
 function delete_duplicate_component() {
     componentPath=$1
 
-    if [ -d $componentPath ] ; then
+    if [ - $componentPath ] ; then
         echo "Component '$componentPath' already exists!"
-        exit 1
         # rm  -rf $componentPath
     fi
 }
@@ -52,8 +51,8 @@ function rename_blueprints() {
     for ext in "css" "tsx" "test.tsx"; do
         src="$path/Temp.$ext"
         dest="$path/$name.$ext"
-        echo "Renaming $src => $dest"
-        mv $src $dest
+        sed "s/Temp/$name/g" $src > $dest
+        rm $src
     done
 
     return 0
