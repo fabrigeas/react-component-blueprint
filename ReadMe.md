@@ -2,7 +2,7 @@
 
 A command line helper to generate typed react components.
 
-npm i -D 
+npm install --save-dev react-component-blueprint
 
 ## Examples
 
