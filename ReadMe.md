@@ -18,6 +18,7 @@ The tool will automatically camelerize the component's name
  src/components/
 
     Spinner/
+      - index.ts
       - Spinner.tsc
       - Spinner.css
       - Spinner.test.tsx
@@ -31,14 +32,17 @@ The tool will automatically camelerize the component's name
  # output
  src/components/
     Input/
+      - index.ts
       - Input.tsc
       - Input.css
       - Input.test.tsx
     Numeric/
+      - index.ts
       - Numeric.tsc
       - Numeric.css
       - Numeric.test.tsx
     Other/
+      - index.ts
       - Other.tsc
       - Other.css
       - Other.test.tsx
