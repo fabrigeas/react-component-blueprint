@@ -14,7 +14,6 @@ The tool will automatically camelerize the component's name
  create spinner
  # output
  src/components/
-
     Spinner/
       - index.ts
       - Spinner.tsx
@@ -51,6 +50,27 @@ The tool will automatically camelerize the component's name
 npx delete Input
 # delete multiple
 npx delete Input Button Other 
+```
+
+### Rename
+
+```bash
+npx rename Input CustomInput
+# before
+src/components/
+  Input/
+    - index.ts
+    - Input.tsx
+    - Input.css
+    - Input.test.tsx
+# result
+src/components/
+  CustomInput/
+    - CustomInput.ts
+    - CustomInput.tsx
+    - CustomInput.css
+    - CustomInput.test.tsx
+
 ```
 ## Resources 
 
