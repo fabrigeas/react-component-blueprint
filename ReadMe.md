@@ -12,14 +12,12 @@ The tool will automatically camelerize the component's name
 
 ```bash
  create spinner
-
-
  # output
  src/components/
 
     Spinner/
       - index.ts
-      - Spinner.tsc
+      - Spinner.tsx
       - Spinner.css
       - Spinner.test.tsx
 ```
@@ -28,22 +26,21 @@ The tool will automatically camelerize the component's name
 
 ```bash
  create Input Numeric Other
- 
  # output
  src/components/
     Input/
       - index.ts
-      - Input.tsc
+      - Input.tsx
       - Input.css
       - Input.test.tsx
     Numeric/
       - index.ts
-      - Numeric.tsc
+      - Numeric.tsx
       - Numeric.css
       - Numeric.test.tsx
     Other/
       - index.ts
-      - Other.tsc
+      - Other.tsx
       - Other.css
       - Other.test.tsx
 ```
@@ -52,7 +49,6 @@ The tool will automatically camelerize the component's name
 
 ```bash
 npx delete Input
-
 # delete multiple
 npx delete Input Button Other 
 ```
