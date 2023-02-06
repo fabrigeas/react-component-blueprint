@@ -10,40 +10,37 @@ if [ $# -eq 0 ] ; then
     exit 1
 fi
 
-destinationFolder="src/components"
-blueprintName="Temp"
+components_root="src/components"
+blueprint_name="Temp"
 
-function verify_destination_folder() {
-    if [ ! -d $destinationFolder ] ; then
-        echo "Creating '$destinationFolder/'"
-        mkdir -p $destinationFolder
+function assert_components_root_exists () {
+    if [ ! -d $components_root ] ; then
+        echo "Creating '$components_root/'"
+        mkdir -p $components_root
     fi
 
     return 0
 }
 
-function verify_component_doesn_not_exist() {
-    path="$destinationFolder/$1"
-
-    if [ -d $path ] ; then
-        echo "'$path' already exists!"
-    fi
-}
-
 function clone_component_blueprint() {
-    cp -r node_modules/react-component-blueprint/component/ "$destinationFolder/$blueprintName"
+    cp -r node_modules/react-component-blueprint/component/ "$components_root/$blueprint_name"
 }
 
 function create_component() {
-    name=$(camelerize $1)
-    path="$destinationFolder/$name"
+    local name=$(camelerize $1)
+    local path="$components_root/$name"
 
-    verify_destination_folder
-    verify_component_doesn_not_exist $path
+    assert_components_root_exists
+
+    if [ $(folder_exists $path) ]; then
+        echo "$path already exist!"
+        exit
+    fi
+
     clone_component_blueprint
-    rename_component "$blueprintName" $name
+    rename_component "$blueprint_name" $name
 
-    echo "'$path' succesfully created :D" 
+    echo "$path created" 
 }
 
 for n in "$@"; do

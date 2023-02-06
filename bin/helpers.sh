@@ -4,11 +4,11 @@ root="src/components"
 renames the given component
 COMMENT
 function rename_component() {
-  path="$root/$1"
+  local path="$root/$1"
 
   for ext in "css" "tsx" "test.tsx"; do
-    src="$path/$1.$ext"
-    dest="$path/$2.$ext"
+    local src="$path/$1.$ext"
+    local dest="$path/$2.$ext"
 
     sed "s/$1/$2/g" $src > $dest
     rm $src
@@ -26,4 +26,12 @@ input => Input
 COMMENT
 function camelerize() {
     echo `echo ${1:0:1} | tr  '[a-z]' '[A-Z]'`${1:1}
+}
+
+function folder_exists () {
+    if [ -d $1 ] ; then
+      echo 1
+    fi
+
+    return 0
 }
