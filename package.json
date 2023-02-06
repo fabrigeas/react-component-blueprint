@@ -21,7 +21,7 @@
   "author": "Fabrice Feugang Kemegni",
   "license": "ISC",
   "bin": {
-    "create": "create.sh",
+    "create": "bin/create.sh",
     "delete": "delete.sh",
     "rename": "bin/rename.sh"
   },
