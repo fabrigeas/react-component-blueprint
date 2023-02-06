@@ -48,6 +48,14 @@ The tool will automatically camelerize the component's name
       - Other.test.tsx
 ```
 
+### Delete component
+
+```bash
+npx delete Input
+
+# delete multiple
+npx delete Input Button Other 
+```
 ## Resources 
 
 [https://blog.developer.atlassian.com/scripting-with-node/](https://blog.developer.atlassian.com/scripting-with-node/9
