@@ -6,7 +6,7 @@
 source node_modules/react-component-blueprint/bin/helpers.sh
 
 if [ $# -eq 0 ] ; then
-    echo "please provide component name!"
+    error_message "Component name is missing"
     exit 1
 fi
 
@@ -15,8 +15,8 @@ blueprint_name="Temp"
 
 function assert_components_root_exists () {
     if [ ! -d $components_root ] ; then
-        echo "Creating '$components_root/'"
         mkdir -p $components_root
+        notification_message "'$components_root/' created"
     fi
 
     return 0
@@ -33,14 +33,14 @@ function create_component() {
     assert_components_root_exists
 
     if [ $(folder_exists $path) ]; then
-        echo "$path already exist!"
+        warning_message "$path already exist!"
         exit
     fi
 
     clone_component_blueprint
     rename_component "$blueprint_name" $name
 
-    echo "$path created" 
+    success_message "$path created" 
 }
 
 for n in "$@"; do

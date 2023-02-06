@@ -6,7 +6,7 @@
 source node_modules/react-component-blueprint/bin/helpers.sh
 
 if [ $# -eq 0 ] ; then
-    echo "please provide component name to delete!"
+    error_message "Missing component name to delete!"
     exit 1
 fi
 
@@ -14,13 +14,13 @@ function delete_component() {
   path="src/components/$1"
 
   if [ ! -d $path ] ; then
-    echo "Component '$path' does not exist!"
+    warning_message "'$path' does not exist!"
     exit 0
   fi
 
   rm -rf $path
 
-  echo "Component $path succesfully deleted!"
+  success_message "'$path' Deleted"
 }
 
 for name in "$@"; do

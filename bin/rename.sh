@@ -5,18 +5,21 @@
 
 source node_modules/react-component-blueprint/bin/helpers.sh
 
+if [ $# -eq 0 ] ; then
+    error_message "Component name is missing"
+    exit 1
+fi
+
 if [ $# -lt 2 ] ; then
-    echo "please provide component name to delete!"
+    error_message "please provide component name to delete!"
     exit 1
 fi
 
 if [ $1 = $2 ] ; then
-  echo "source and destination must be different"
+  error_message "source and destination must be different"
   exit 1
 fi
 
-src=$1
-dest=$(camelerize $2)
 path="src/components"
 
 function component_does_not_exists() {
@@ -27,17 +30,23 @@ function component_does_not_exists() {
 }
 
 function main() {
+  local src=$1
+  local dest=$(camelerize $2)
+
   if component_does_not_exists $src; then
+    warning_message "$src does not exist"
     exit
   fi
 
   if ! component_does_not_exists $dest; then
-    echo "$path/$dest already exists"
+    warning_message "$path/$dest already exists"
     exit
   fi
 
   # see helpers.sh rename_component
   rename_component $src $dest
+
+  success_message "$src renamed"
 }
 
 main
