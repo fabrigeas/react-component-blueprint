@@ -4,6 +4,10 @@
   "description": "a command line tool to create, rename and delete typed react components and other helpers",
   "main": "index.js",
   "scripts": {
+    "minor": "npm version minor && npm publish",
+    "patch": "npm version patch && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push --all --follow-tags",
     "test": "echo \"Error: no test specified\" && exit 1",
     "patch-release": "npm version patch && npm publish && git push --follow-tags"
   },
