@@ -3,6 +3,8 @@
 
 # Author: Fabrice Feugang Kemegni
 
+source node_modules/react-component-blueprint/bin/helpers.sh
+
 if [ $# -eq 0 ] ; then
     echo "please provide component name to delete!"
     exit 1
