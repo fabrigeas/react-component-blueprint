@@ -8,10 +8,8 @@ if [ $# -eq 0 ] ; then
     exit 1
 fi
 
-destinationFolder="src/components"
-
 function delete_component() {
-  path="$destinationFolder/$1"
+  path="src/components/$1"
 
   if [ ! -d $path ] ; then
     echo "Component '$path' does not exist!"
