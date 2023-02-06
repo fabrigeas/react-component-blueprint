@@ -1,4 +1,7 @@
+
 #! /usr/bin/env node
+
+# Author: Fabrice Feugang Kemegni
 
 if [ $# -eq 0 ] ; then
     echo "please provide component name to delete!"
