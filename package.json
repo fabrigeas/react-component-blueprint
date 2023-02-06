@@ -22,7 +22,8 @@
   "license": "ISC",
   "bin": {
     "create": "create.sh",
-    "delete": "delete.sh"
+    "delete": "delete.sh",
+    "rename": "rename.sh"
   },
   "repository": {
     "type": "git",
