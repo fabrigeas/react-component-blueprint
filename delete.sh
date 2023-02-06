@@ -10,22 +10,11 @@ fi
 
 destinationFolder="src/components"
 
-verify_destination_folder() {
-    if [ ! -d $destinationFolder ] ; then
-        echo "'$destinationFolder' folder is does not exist!"
-      exit 0
-    fi
-}
-
-delete_component() {
-  if [ ! verify_destination_folder ]; then
-    exit 1
-  fi
-
+function delete_component() {
   path="$destinationFolder/$1"
 
   if [ ! -d $path ] ; then
-    echo "Component '$path' is does not exist!"
+    echo "Component '$path' does not exist!"
     exit 0
   fi
 
