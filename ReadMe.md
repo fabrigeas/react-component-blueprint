@@ -54,4 +54,4 @@ npx delete Input Button Other
 ```
 ## Resources 
 
-[https://blog.developer.atlassian.com/scripting-with-node/](https://blog.developer.atlassian.com/scripting-with-node/9
+[https://blog.developer.atlassian.com/scripting-with-node/](https://blog.developer.atlassian.com/scripting-with-node/9)
