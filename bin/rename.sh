@@ -3,7 +3,7 @@
 
 # Author: Fabrice Feugang Kemegni
 
-source ../react-component-blueprint/bin/helpers.sh
+source node_modules/react-component-blueprint/bin/helpers.sh
 
 if [ $# -lt 2 ] ; then
     echo "please provide component name to delete!"
@@ -16,7 +16,7 @@ if [ $1 = $2 ] ; then
 fi
 
 src=$1
-dest=$2
+dest=$(camelerize $2)
 path="src/components"
 
 function component_does_not_exists() {

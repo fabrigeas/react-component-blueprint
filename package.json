@@ -23,7 +23,7 @@
   "bin": {
     "create": "create.sh",
     "delete": "delete.sh",
-    "rename": "rename.sh"
+    "rename": "bin/rename.sh"
   },
   "repository": {
     "type": "git",
