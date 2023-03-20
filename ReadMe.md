@@ -49,7 +49,7 @@ The tool will automatically camelerize the component's name
 ```bash
 npx delete Input
 # delete multiple
-npx delete Input Button Other 
+npx delete Input Button Other
 ```
 
 ### Rename
@@ -72,6 +72,7 @@ src/components/
     - CustomInput.test.tsx
 
 ```
-## Resources 
+
+## Resources
 
 [https://blog.developer.atlassian.com/scripting-with-node/](https://blog.developer.atlassian.com/scripting-with-node/9)
