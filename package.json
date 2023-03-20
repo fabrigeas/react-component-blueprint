@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "minor": "npm version minor && npm publish",
+    "format": "prettier --write .",
     "patch": "npm version patch && npm publish",
     "major": "npm version major && npm publish",
     "postpublish": "git push --all --follow-tags",
@@ -32,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/fabrigeas/react-component-blueprint/issues"
   },
-  "homepage": "https://github.com/fabrigeas/react-component-blueprint#readme"
+  "homepage": "https://github.com/fabrigeas/react-component-blueprint#readme",
+  "devDependencies": {
+    "prettier": "^2.8.5"
+  }
 }
