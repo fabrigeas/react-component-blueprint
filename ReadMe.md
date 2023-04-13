@@ -4,12 +4,10 @@ A command line helper to generate typed react components.
 
 npm install --save-dev react-component-blueprint
 
-## Examples
-
-### Camelcase names
+## Create component (Camelcase names)
 The tool will automatically camelerize the component's name
 ```bash
- create spinner
+ npx create spinner
  # output
  src/components/
     Spinner/
@@ -20,9 +18,9 @@ The tool will automatically camelerize the component's name
       - Spinner.stories.tsx
 ```
 
-### Creata multiple components
+## Creata multiple components
 ```bash
- create Input Numeric Other
+ npx create Input Numeric Other
  # output
  src/components/
     Input/
@@ -45,17 +43,16 @@ The tool will automatically camelerize the component's name
       - Other.css
       - Other.test.tsx
       - Other.stories.tsx
-
 ```
 
-### Delete component
+## Delete component
 ```bash
 npx delete Input
 # delete multiple
 npx delete Input Button Other
 ```
 
-### Rename
+## Rename
 ```bash
 npx rename Input CustomInput
 # before
@@ -75,7 +72,6 @@ src/components/
     - CustomInput.css
     - CustomInput.test.tsx
     - CustomInput.stories.tsx
-
 ```
 
 ## Resources
