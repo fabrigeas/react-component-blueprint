@@ -13,6 +13,7 @@ fi
 components_root="src/components"
 blueprint_name="Temp"
 
+# if src/components/ does not exist, create it
 function assert_components_root_exists () {
     if [ ! -d $components_root ] ; then
         mkdir -p $components_root
@@ -22,6 +23,7 @@ function assert_components_root_exists () {
     return 0
 }
 
+# Copy the component of blueprint into your src/component/
 function clone_component_blueprint() {
     cp -r node_modules/react-component-blueprint/component/ "$components_root/$blueprint_name"
 }
