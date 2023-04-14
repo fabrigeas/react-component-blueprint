@@ -1,3 +1,6 @@
+version bump 1.5.3
+feat(component): export testId rom component
+version bump 1.5.2
 version bump 1.5.2
 docs(README): update rename command usage
 version bump 1.5.1
