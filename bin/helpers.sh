@@ -33,7 +33,7 @@ COMMENT
 function rename_component() {
   local path="$root/$1"
 
-  for ext in "css" "tsx" "test.tsx"; do
+  for ext in "css" "tsx" "test.tsx" "stories.tsx"; do
     local src="$path/$1.$ext"
     local dest="$path/$2.$ext"
 
