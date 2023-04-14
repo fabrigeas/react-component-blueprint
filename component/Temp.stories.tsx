@@ -7,7 +7,7 @@ const meta = {
   title: 'Components/Temp',
   component: Temp,
   decorators: [],
-  args: {}
+  args: {},
 } satisfies Meta<typeof Temp>;
 
 export default meta;
