@@ -2,9 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ReactDOM from 'react-dom/client';
 import { act } from 'react-dom/test-utils';
-import Temp from './Temp';
-
-const testId = 'Temp';
+import Temp, { testId } from './Temp';
 
 let container: HTMLDivElement;
 

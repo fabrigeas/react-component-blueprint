@@ -1,8 +1,10 @@
 import React from 'react';
 import './Temp.css';
 
-interface TempProps {}
+export interface TempProps {}
 
-const Temp = ({}: TempProps) => <div data-testid="Temp"></div>;
+export const testId = 'Temp';
+
+const Temp = ({}: TempProps) => <div data-testid={testId}></div>;
 
 export default Temp;
