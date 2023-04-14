@@ -1,3 +1,5 @@
+version bump 1.6.0
+refactor(storybook): fix deprecation due to v7
 version bump 1.5.3
 feat(component): export testId rom component
 version bump 1.5.2
