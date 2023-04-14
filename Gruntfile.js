@@ -14,8 +14,7 @@ module.exports = grunt => {
     pkg,
     shell: {
       bumpVersion: {
-        command: target =>
-          `npm version --allow-same-version ${target ?? 'patch'} -m "version bump %s"`,
+        command: v => `npm version --allow-same-version ${v} -m "version bump %s"`,
         options: {
           stdout: false,
           callback(error, {}, {}, callback) {
@@ -26,8 +25,8 @@ module.exports = grunt => {
           },
         },
       },
-      publish: 'npm publish',
-      push: 'git push --follow-tags',
+      publishNpm: 'npm publish',
+      pushFollowTags: 'git push --follow-tags',
       updateChangelog: {
         command: [
           "git log --oneline | sed 's/^[a-zA-Z0-9]* //g' > CHANGELOG.md",
@@ -57,33 +56,14 @@ module.exports = grunt => {
 
   grunt.loadNpmTasks('grunt-shell');
 
-  grunt.registerTask(
-    'publish',
-    'update npm version, gen changelog, publish and push',
-    () => {
-      const { task } = grunt;
-      task.run('shell:minor');
-      task.run('shell:publish');
-      task.run('shell:updateChangelog');
-      task.run('shell:push');
-    },
-  );
+  grunt.registerTask('publish', (version = 'patch') => {
+    const { task } = grunt;
 
-  grunt.registerTask(
-    'deploy',
-    'Buld bundles, update npm version and changelog, push',
-    () => {
-      const target = grunt.option('target') || 'patch';
-      const { task } = grunt;
-
-      task.run('build');
-      task.run(`shell:bumpVersion:+${target}`);
-      task.run('shell:updateChangelog');
-      task.run('shell:push');
-      task.run('shell:copyEnvFiles');
-      task.run('shell:ssh');
-    },
-  );
+    task.run(`shell:bumpVersion:${version}`);
+    task.run('shell:publishNpm');
+    task.run('shell:updateChangelog');
+    task.run('shell:pushFollowTags');
+  });
 
   grunt.registerTask('shell:default', ['npm version']);
 };
