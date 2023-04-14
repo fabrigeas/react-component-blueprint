@@ -1,3 +1,6 @@
+version bump 1.5.1
+Merge branch 'master' of github.com:fabrigeas/react-component-blueprint
+version bump 1.5.0
 version bump 1.5.0
 docs(ReadMe): update usage, deployment steps
 nuild(grunt): updat tasks
