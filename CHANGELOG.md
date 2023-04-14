@@ -1,3 +1,5 @@
+version bump 1.5.2
+docs(README): update rename command usage
 version bump 1.5.1
 Merge branch 'master' of github.com:fabrigeas/react-component-blueprint
 version bump 1.5.0
