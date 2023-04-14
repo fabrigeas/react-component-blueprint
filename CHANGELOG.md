@@ -1,3 +1,6 @@
+version bump 1.6.1
+fix(components): add args to storybook meta
+version bump 1.6.0
 version bump 1.6.0
 refactor(storybook): fix deprecation due to v7
 version bump 1.5.3
