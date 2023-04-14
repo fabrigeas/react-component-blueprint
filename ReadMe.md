@@ -48,7 +48,7 @@ npx delete-component Input
 npx delete-component Input Button Other
 ```
 
-### Rename
+### Rename a component
 ```bash
 npx rename-component Input CustomInput
 # before
