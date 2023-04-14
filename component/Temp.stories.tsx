@@ -1,16 +1,19 @@
 import React from 'react';
-import { type ComponentStory, type ComponentMeta } from '@storybook/react';
+import { StoryObj, Meta } from '@storybook/react';
 import Temp from './Temp';
 
-export default {
+// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+const meta = {
   title: 'Components/Temp',
   component: Temp,
   decorators: [],
-} as ComponentMeta<typeof Temp>;
+} satisfies Meta<typeof Temp>;
 
-const Template: ComponentStory<typeof Temp> = args => <Temp {...args} />;
+export default meta;
 
-export const Outlined = Template.bind({});
-Outlined.args = {
-  outlined: true,
+type Story = StoryObj<typeof meta>;
+
+// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+export const Default: Story = {
+  args: {},
 };
