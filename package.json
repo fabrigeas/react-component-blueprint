@@ -1,6 +1,6 @@
 {
   "name": "react-component-blueprint",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "a command line tool to create, rename and delete typed react components and other helpers",
   "main": "index.js",
   "scripts": {
